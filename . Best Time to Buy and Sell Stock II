@@ -1,0 +1,14 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+         int dpik0 = 0, dpik1 = -(int) 1e9;
+
+        for (int price : prices) {
+            int dpik_10 = dpik0; 
+            dpik0 = Math.max(dpik0, dpik1 + price);
+            dpik1 = Math.max(dpik1, dpik_10 - price);
+        }
+
+        return dpik0;
+   
+    }
+}
