@@ -1,0 +1,1 @@
+select Name as Employee from Employee e1 where e1.salary>(select salary from Employee e2 where Id=e1.ManagerId); 
